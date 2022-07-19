@@ -1,6 +1,7 @@
 <script lang="ts">
 	let m = new Map();
 	m.set('Projects', '#projects');
+	m.set('Skills', '#skills');
 	m.set('About', '#about');
 	m.set('Home', '#home');
 

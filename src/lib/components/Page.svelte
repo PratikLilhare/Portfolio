@@ -7,7 +7,7 @@
 </script>
 
 <Anchor {id} />
-<div class="flex flex-col items-center page {backgroundClass}mb-5">
+<div class="flex flex-col items-center page {backgroundClass} mt-5">
 	<div class="pt-4 pb-2 text-4xl text-center">{title}</div>
 	<slot />
 </div>
