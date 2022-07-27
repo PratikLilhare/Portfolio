@@ -34,9 +34,9 @@ onMount(async () => {
     {#each experience as exp}
         <div class="shadow-md rounded-md">
 
-            <div class="p-5 w-full">
+            <div class="p-5 w-full text-sm lg:text-xl">
                 <div class="flow-root">
-                    <h5 class="float-left text-xl font-semibold mb-2">{exp.company}</h5>
+                    <h5 class="float-left font-semibold mb-3">{exp.title}</h5>
                     <p class="float-right">
                         {stripDate(new Date(exp.start))} 
                         - 
@@ -48,10 +48,8 @@ onMount(async () => {
                     </p>
                 </div>
 
-                <!-- <p class="mb-4">{exp.description}</p> -->
-                
+                <h5 class="">{exp.company}</h5>
 
-        
                 <main class="w-full p-8 mx-auto">
                     <section class="shadow row">
                         <div class="tabs">
@@ -83,7 +81,7 @@ onMount(async () => {
                 
                 {#each exp.skills as skill}
                     <button 
-                        class="text-sm bg-white py-2 px-4 rounded shadow m-2"
+                        class="text-sm py-2 px-4 rounded shadow m-2"
                         disabled
                         >
                         {skill.name}

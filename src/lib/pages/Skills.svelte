@@ -26,7 +26,7 @@ onMount(async () => {
 </script>
 
 <Page id="skills" title="Skills">
-    <div class="container px-4 flex-grow w-2/3 py-4 sm:py-16 mx-auto px-0 text-center">
+    <div class="container flex-grow w-2/3 py-4 mx-auto text-center">
         <span class="inline-flex space-x-3 font-medium">
             <li class="text-[#69a8dc]">
                 Backend

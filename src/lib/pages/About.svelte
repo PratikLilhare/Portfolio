@@ -31,6 +31,11 @@ export function show() {
 </script>
 
 <Page id="about" title="About">
+	<p class="p-2 lg:w-2/4">
+		As a software engineer, I have 1 year of experience working in a fast paced environment on various projects. 
+		I specialize in python and have experience working with Django, Django Rest Framework(DRF), FastAPI and AWS services like AWS Lambda and s3 bucket. 
+		I also have experience working with frontend frameworks like Jquery, and beginner experience in ReactJS and VueJs. Have a look at my work or get in touch!
+	</p>
 	{#if showResume}
 		<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" on:click={show}>
 			Hide

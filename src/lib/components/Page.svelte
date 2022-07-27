@@ -6,8 +6,8 @@ export let title: string = '';
 </script>
 
 <Anchor {id} />
-<div class="flex flex-col items-center page {primaryBackground} mt-5 text-sm lg:text-lg md:text-md">
-	<div class="pt-4 pb-2 text-4xl text-center">{title}</div>
+<div class="flex flex-col items-center page {primaryBackground} mt-5 sm:text-sm lg:text-lg md:text-md">
+	<div class="pt-4 pb-2 text-4xl text-center underline">{title}</div>
 	<slot />
 </div>
 
