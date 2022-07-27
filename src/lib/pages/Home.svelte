@@ -1,4 +1,6 @@
 <script>
+import Page from "$lib/components/Page.svelte";
+
 import Social from "$lib/components/Social.svelte";
 import { baseURL } from "$lib/utils/constants";
 import { onMount } from "svelte";
@@ -31,20 +33,22 @@ onMount(async () => {
 
 </script>
 
-<div class="flex flex-col items-center justify-center page">
-	<div class="text-center">
-			
-			
-		<!-- svelte-ignore a11y-img-redundant-alt -->
-		<img 
-			class="inline object-cover w-36 h-36 mr-2 rounded-full" 
-			src="{avatar_url}"
-			alt="profile image" 
-		/>
-			
-		<h1 class="text-4xl m-6">Pratik Lilhare</h1>
-		<Social/>
+<Page id="home" title="">
+	<div class="flex flex-col items-center justify-center page">
+		<div class="text-center">
+				
+				
+			<!-- svelte-ignore a11y-img-redundant-alt -->
+			<img 
+				class="inline object-cover w-36 h-36 mr-2 rounded-full" 
+				src="{avatar_url}"
+				alt="profile image" 
+			/>
+				
+			<h1 class="text-4xl m-6">Pratik Lilhare</h1>
+			<Social/>
 
+		</div>
+		<div class="flex justify-evenly" />
 	</div>
-	<div class="flex justify-evenly" />
-</div>
+</Page>

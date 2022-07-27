@@ -16,7 +16,7 @@
 	}
 </script>
 
-<nav class="flow-root flex bg-white sticky top-0 z-50 h-[var(--header-height)] border-b-2">
+<nav class="flow-root flex bg-white sticky top-0 z-50 h-[var(--header-height)] border-b-2 overflow-hidden">
 	<hr/><hr/>
 	<a href="/" class="float-left px-3 py-2 text-slate-700 font-bold">Portfolio</a>
 

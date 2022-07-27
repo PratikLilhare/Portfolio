@@ -1,6 +1,6 @@
 <script lang="ts">
 import Page from '$lib/components/Page.svelte';
-import { baseURL, primaryBackground } from '$lib/utils/constants';
+import { baseURL } from '$lib/utils/constants';
 import { createEventDispatcher, onMount } from 'svelte';
 
 let resume_url = '';
@@ -28,15 +28,9 @@ export function show() {
 	dispatch('show', showResume);
 	}
 
-export let backgroundClass = primaryBackground;
-
 </script>
 
-<svelte:head>
-	<title>About</title>
-</svelte:head>
-
-<Page id="about" title="About" {backgroundClass}>
+<Page id="about" title="About">
 	{#if showResume}
 		<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" on:click={show}>
 			Hide
@@ -45,7 +39,7 @@ export let backgroundClass = primaryBackground;
 			<!-- svelte-ignore a11y-missing-attribute -->
 			<iframe
 				src={resume_url}
-				class=" h-screen lg:w-2/4 sm:w-screen overscroll-y-auto"
+				class=" h-screen w-screen lg:w-2/4 overscroll-y-auto"
 				allow="autoplay"
 				scrolling="no"
 			/>

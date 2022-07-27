@@ -1,13 +1,12 @@
 <script lang="ts">
-	import Anchor from './Anchor.svelte';
-
-	export let id: string;
-	export let title: string = '';
-	export let backgroundClass: string = 'bg-neutral-200 dark:bg-neutral-900';
+import { primaryBackground } from '$lib/utils/constants';
+import Anchor from './Anchor.svelte';
+export let id: string;
+export let title: string = '';
 </script>
 
 <Anchor {id} />
-<div class="flex flex-col items-center page {backgroundClass} mt-5">
+<div class="flex flex-col items-center page {primaryBackground} mt-5 text-sm lg:text-lg md:text-md">
 	<div class="pt-4 pb-2 text-4xl text-center">{title}</div>
 	<slot />
 </div>

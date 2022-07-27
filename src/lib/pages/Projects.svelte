@@ -1,7 +1,7 @@
 <script lang="ts">
 
 import Page from "$lib/components/Page.svelte";
-import { baseURL, primaryBackground } from "$lib/utils/constants";
+import { baseURL } from "$lib/utils/constants";
 import { onMount } from "svelte";
 
 var portfolio_projects:any[] = [];
@@ -16,7 +16,6 @@ async function loadProjects() {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       portfolio_projects = data;
     });
 }
@@ -30,7 +29,6 @@ async function loadPersonalProjects() {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       portfolio_personal_projects = data["projects"];
     });
 }
@@ -40,16 +38,9 @@ onMount(async () => {
   loadPersonalProjects();
 });
 
-export let backgroundClass = primaryBackground;
-
 </script>
 
-<svelte:head>
-	<title>Projects</title>
-</svelte:head>
-
-
-<Page id="projects" title="Projects" {backgroundClass}>
+<Page id="projects" title="Projects">
 	<div class="container px-4 flex-grow w-full py-4 sm:py-16 mx-auto px-0">
     <div class="mx-auto w-full md:w-4/5 px-4">
       <div class="container my-8">

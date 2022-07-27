@@ -1,7 +1,7 @@
 <script lang="ts">
 
 import Page from "$lib/components/Page.svelte";
-import { baseURL, primaryBackground } from "$lib/utils/constants";
+import { baseURL} from "$lib/utils/constants";
 import { onMount } from "svelte";
 
 var skills:any[] = [];
@@ -15,7 +15,6 @@ async function loadSkills() {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       skills = data;
     });
 }
@@ -24,18 +23,9 @@ onMount(async () => {
     loadSkills();
 });
 
-export let backgroundClass = primaryBackground;
-
 </script>
 
-
-<svelte:head>
-	<title>Skills</title>
-</svelte:head>
-
-
-
-<Page id="skills" title="Skills" {backgroundClass}>
+<Page id="skills" title="Skills">
     <div class="container px-4 flex-grow w-2/3 py-4 sm:py-16 mx-auto px-0 text-center">
         <span class="inline-flex space-x-3 font-medium">
             <li class="text-[#69a8dc]">
@@ -55,7 +45,7 @@ export let backgroundClass = primaryBackground;
             {#each skills as skill}
                 <button 
                     class=
-                        "{skill.type} text-white font-bold py-2 px-4 
+                        "{skill.type} text-white font-bold py-2 px-4 text-xs
                         rounded-full m-2"
                     disabled
                     >
